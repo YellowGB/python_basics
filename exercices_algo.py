@@ -17,17 +17,17 @@ try:
     else:
         print("b est plus petit que a")
 
-except:
-    print("Ceci n'est pas un nombre")
+except ValueError as ex:
+    print("Ceci n'est pas un nombre (",ex,")")
 
 """
 a = input("Entrer nombre 1 : ")
 b = input("Entrer nombre 2 : ")
 
 if a.isnumeric() and b.isnumeric():
-    if int(a) < int(b):
+    if a < b:
         print("a est plus petit que b")
-    elif int(a) == int(b):
+    elif a == b:
         print("a est égal à b")
     else:
         print("b est plus petit que a")
