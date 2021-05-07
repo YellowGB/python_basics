@@ -1,0 +1,82 @@
+Ecrire en pseudo-code un algorithme qui lit un nombre saisi par l’utilisateur et affiche son carré
+
+DEBUT
+	variable nombre : integer <- 0
+	
+	afficher("Veuillez saisir un nombre : ")
+	saisie(nombre)
+	
+	nombre = nombre * nombre
+	
+	afficher(nombre)
+FIN
+
+Nombre aléatoire entre 1 et 100
+L'utilisateur tape un nombre
+Si le nombre est en dessous du nombre mystère,
+dire qu'il est en dessous, et vice-versa
+S'il trouve le nombre, c'est gagné
+
+Etapes:
+	savoir le nombre mystère
+	l'utilisateur saisit un nombre entre 1 et 100
+	si le nombre saisit est inférieur au nombre mystère
+	afficher le nombre à trouver est supérieur
+	si le nombre saisit est supérieur au nombre mystère
+	afficher le nombre à trouver est inférieur
+	si le nombre saisit est égal au nombre mystère
+	afficher c'est gagné
+
+DEBUT
+	variable nombre_mystere : integer <- 90
+	variable saisie : integer <- 0
+	
+	print("Saisissez une valeur entre 1 et 100: ")
+	input(saisie)
+	
+	IF saisie < nombre_mystere
+		print("Le nombre à trouver est supérieur.")
+	FI
+	IF saisie > nombre_mystere
+		print("Le nombre à trouver est inférieur.")
+	FI
+	IF saisie == nombre_mystere
+		print("C'est gagné !")
+	FI
+FIN
+
+Etapes:
+	savoir le nombre mystère
+	l'utilisateur saisit un nombre entre 1 et 100
+	tant que nombre saisit n'est pas égal à nombre mystère
+	recommencer ce qui suit
+		si le nombre saisit est inférieur au nombre mystère
+		afficher le nombre à trouver est supérieur
+		sinon
+		afficher le nombre à trouver est inférieur
+		l'utilisateur saisit un nombre entre 1 et 100
+	je sors de la boucle
+	si le nombre saisit est égal au nombre mystère
+	afficher c'est gagné
+
+DEBUT
+	variable nombre_mystere : integer <- 90
+	variable saisie : integer <- 0
+	
+	print("Saisissez une valeur entre 1 et 100: ")
+	input(saisie)
+	
+	WHILE saisie != nombre_mystere
+		IF saisie < nombre_mystere
+			print("Le nombre à trouver est supérieur.")
+		ELSE
+			print("Le nombre à trouver est inférieur.")
+		FI
+		
+		print("Saisissez une valeur entre 1 et 100: ")
+		input(saisie)
+	END WHILE
+	IF saisie == nombre_mystere
+		print("C'est gagné !")
+	FI
+FIN
