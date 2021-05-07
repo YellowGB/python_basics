@@ -13,12 +13,17 @@ def squareNum(num1):
     mul = num1 * num1
     print(mul)
 
-# Call the function helloWorld
-helloWorld()
+# Ce qui suit ne s'exécutera que si le "programme"
+# est lancé directement depuis ce fichier
+# et pas s'il est appelé dans un import
+# depuis un autre fichier (exemple dans exercices_algo.py)
+if __name__ == "__main__":
+    # Call the function helloWorld
+    helloWorld()
 
-# Add numbers
-addNumbers(2,3)
-addNumbers(4,5)
+    # Add numbers
+    addNumbers(2,3)
+    addNumbers(4,5)
 
-# Square number
-squareNum(12)
+    # Square number
+    squareNum(12)
